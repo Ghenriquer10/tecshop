@@ -140,19 +140,16 @@ AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-ACCOUNT_LOGIN_METHODS = ["email"]
-ACCOUNT_SIGNUP_FIELDS = ["email*", "password2*"]
 
 # Redirecionamento após login do usuário
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/signin"
+LOGOUT_REDIRECT_URL = "/"
 
 # Configuração para o envio de email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 SITE_ID = 1
 
-ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]
 
 # ----------------------------------------------------------------------------
 # Apps adicionados
