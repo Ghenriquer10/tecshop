@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "usuarios",
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,6 @@ INSTALLED_APPS += [
     "django.contrib.sites",  # Necessário para o Allauth
     "allauth",  # Base do Allauth
     "allauth.account",  # Conta do usuário
-    "allauth.socialaccount",  # Conta social
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -143,13 +143,23 @@ AUTHENTICATION_BACKENDS = [
 
 # Redirecionamento após login do usuário
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/accounts/login/"
+ACCOUNT_SIGNUP_REDIRECT_URL = "accounts/login/"
 
 # Configuração para o envio de email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 SITE_ID = 1
 
+AUTH_USER_MODEL = "usuarios.Usuarios"
+
+ACCOUNT_LOGIN_METHODS = {"email"}
+ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]
+
 
 # ----------------------------------------------------------------------------
 # Apps adicionados
+
+# django crispy forms
+INSTALLED_APPS += ["crispy_forms"]
+CRISPY_TEMPLATE_PACK = "bootstrap5"
