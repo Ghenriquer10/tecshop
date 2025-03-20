@@ -1,0 +1,9 @@
+// Importa apenas as funções e variáveis do Bootstrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Opcional: Defina suas próprias variáveis antes de importar o resto do Bootstrap
+$primary: #007bff;  // Exemplo de cor personalizada
+
+// Importa os estilos do Bootstrap
+@import "bootstrap/scss/bootstrap";
