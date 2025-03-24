@@ -1,18 +1,16 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "/static/",
   build: {
-    manifest: true,
-    outDir: "../static/", // Gera os arquivos estáticos para o Django
+    outDir: "../static/",  // Define que os arquivos serão salvos na pasta static/
+    emptyOutDir: true,
     rollupOptions: {
-      input: "./src/main.js", // Arquivo principal de entrada
+      input: "index.html",
     },
   },
   server: {
-    port: 3000,
+    port: 5173,
     strictPort: true,
-    hmr: {
-      host: "localhost",
-    },
   },
 });

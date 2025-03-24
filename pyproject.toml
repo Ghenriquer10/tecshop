@@ -1,0 +1,13 @@
+[project]
+name = "tecshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django",
+    "django-allauth",
+    "django-crispy-forms",
+    "crispy-bootstrap5",
+]
+

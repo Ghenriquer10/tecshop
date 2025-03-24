@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Bem-vindo ao TecShop!</h1>
-<p>Você está logado como {{ user.email }}.</p>
+<h1 class="titulos">Bem-vindo ao TecShop!</h1>
+<p>Você está logado como <i class="fas fa-user"></i> {{ user.email }}.</p>
 <a href="{% url 'account_logout' %}">Sair</a>
 {% endblock %}
