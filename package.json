@@ -1,6 +1,30 @@
 {
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.16",
     "bootstrap": "^5.3.3",
-    "sass": "^1.86.0"
-  }
+    "sass": "^1.86.0",
+    "tailwindcss": "^4.0.16"
+  },
+  "name": "tecshop",
+  "description": "CRIAÇÃO DE UM PROJETO DJANGO",
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "devDependencies": {
+    "vite": "^6.2.3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghenriquer10/tecshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghenriquer10/tecshop/issues"
+  },
+  "homepage": "https://github.com/Ghenriquer10/tecshop#readme"
 }

@@ -1,4 +1,4 @@
-{% load static %}
+{% load django_vite %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,11 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}TecShop{% endblock %}</title>
-
-    <!-- CSS gerado pelo Vite -->
-    <link rel="stylesheet" href="{% static 'assets/main.css' %}">
-
-    {% block extra_css %}{% endblock %}
+    {% vite_hmr_client %}
+    {% vite_asset 'static/js/main.js' %}
 </head>
 <body>
 
@@ -54,7 +51,6 @@
     </div>
 
     <!-- Scripts do Bootstrap (importado pelo Vite) -->
-    <script type="module" src="{% static 'assets/main.js' %}"></script>
 
     {% block extra_js %}{% endblock %}
 </body>

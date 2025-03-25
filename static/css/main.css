@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.titulos{
+    background-color: gray;
+    font-size: 50px;
+}
